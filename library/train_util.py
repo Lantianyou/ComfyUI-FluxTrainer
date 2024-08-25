@@ -1670,6 +1670,8 @@ class DreamBoothDataset(BaseDataset):
             assert (
                 min(resolution) >= min_bucket_reso
             ), f"min_bucket_reso must be equal or less than resolution / min_bucket_resoは最小解像度より大きくできません。解像度を大きくするかmin_bucket_resoを小さくしてください"
+            print(f"max_bucket_reso before assignment: {max_bucket_reso}")
+            print(f"max_bucket_reso after assignment: {self.max_bucket_reso}")
             assert (
                 max(resolution) <= max_bucket_reso
             ), f"max_bucket_reso must be equal or greater than resolution / max_bucket_resoは最大解像度より小さくできません。解像度を小さくするかmin_bucket_resoを大きくしてください"
